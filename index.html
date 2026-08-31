@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Meri Jaan ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            overflow: hidden;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 500px;
+            padding: 40px 25px;
+            text-align: center;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: beat 1s infinite;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        button {
+            padding: 14px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background: #e91e63;
+            color: white;
+        }
+
+        .no {
+            background: #ffe0e9;
+            color: #e91e63;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #e91e63;
+            min-height: 70px;
+        }
+
+        @keyframes beat {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="heart">❤️</div>
+
+        <h1>Sorry Meri Jaan 🥺</h1>
+
+        <p>
+            Mujhse galti ho gayi... 🥺
+            <br>
+            I am really really sorry! 🙏❤️
+        </p>
+
+        <p>
+            Tum mere liye bahut special ho.
+            <br>
+            Please ek baar smile kar do 😊🌹
+        </p>
+
+        <button class="yes" onclick="forgive()">
+            Maaf Kiya ❤️
+        </button>
+
+        <button class="no" onclick="notForgive()">
+            Abhi Nahi 😤
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        let count = 0;
+
+        function forgive() {
+
+            document.getElementById("message").innerHTML =
+            "🥹❤️ Thank You Meri Jaan! ❤️🥹" +
+            "<br>" +
+            "Ab ek cute si smile please 😊🌹" +
+            "<br><br>" +
+            "Love You! 🫶❤️";
+
+            document.querySelector(".no").style.display = "none";
+        }
+
+
+        function notForgive() {
+
+            count++;
+
+            let messages = [
+
+                "🥺 Please maan jao na...",
+
+                "😭 Itna gussa bhi mat karo...",
+
+                "🍫 Chocolate bhi dunga, ab toh maaf kar do!",
+
+                "🌹 Flower + Sorry + Love = Please maan jao ❤️",
+
+                "🥹 Last time... Maaf Kiya? ❤️"
+
+            ];
+
+            document.getElementById("message").innerHTML =
+                messages[Math.min(count - 1, messages.length - 1)];
+
+
+            if (count >= 5) {
+
+                document.querySelector(".no").innerHTML =
+                    "Maaf Kiya? ❤️";
+
+                document.querySelector(".no").onclick =
+                    forgive;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
