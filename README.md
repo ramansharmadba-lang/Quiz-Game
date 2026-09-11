@@ -6,11 +6,6 @@ A fun and interactive KBC-inspired quiz game built with Python and Streamlit. An
 ### 🚀 Live Demo
 **Play the game here:** https://quiz-game-pahsltrzstznbxo2wgqbzc.streamlit.app/
 
----
-
-# 💰 KBC Style Quiz Game
-
-A "Kaun Banega Crorepati" (KBC) inspired quiz game built with **Streamlit**, where players answer general knowledge questions to climb a prize ladder — one wrong answer ends the game.
 
 ## 🖥️ Features
 
